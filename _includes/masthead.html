@@ -13,7 +13,7 @@
 {% if include.metadata %}
   <div class="f4 mb-6">
     {% if user.name %}
-      <div class="{{ metadata_styles }}">
+      <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
         <div style="font-size: 24px; margin-right: 8px !important;"><i class="fab fa-github-alt fa-sm fa-fw"></i></div>
         <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
           @{{ user.login }}
@@ -21,7 +21,7 @@
       </div>
     {% endif %}
     {% if user.email %}
-      <div class="{{ metadata_styles }}">
+      <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
         <div style="font-size: 24px; margin-right: 8px !important;"><i class="fas fa-envelope fa-sm fa-fw"></i></div>
         <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
           {{ user.email }}
