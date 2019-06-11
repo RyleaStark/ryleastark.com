@@ -29,8 +29,8 @@ projects:
     # - repo-name
 
  social_media:
-   linkedin: RyleaStark
-   twitter: DeviledMoon
+   linkedin: "RyleaStark"
+   twitter: "DeviledMoon"
    website: https://versobit.com
 
 topics:
