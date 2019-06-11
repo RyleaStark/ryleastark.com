@@ -14,7 +14,7 @@
   <div class="f4 mb-6">
     {% if user.name %}
       <div class="{{ metadata_styles }}">
-        {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
+        <div style="font-size: 24px; margin-right: 8px !important;"><i class="fab fa-github fa-sm fa-fw"></i></div>
         <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
           @{{ user.login }}
         </a>
@@ -22,7 +22,7 @@
     {% endif %}
     {% if user.email %}
       <div class="{{ metadata_styles }}">
-        <div style="font-size: 24px; margin-right: 8px !important; height: 20px;"><i class="fab fa-github fa-sm fa-fw"></i></div>
+        <div style="font-size: 24px; margin-right: 8px !important;"><i class="fas fa-envelope fa-sm fa-fw"></i></div>
         <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
           {{ user.email }}
         </a>
@@ -35,7 +35,7 @@
 	  {% assign service_shortname = account[0] %}
             {% assign service = site.data.social_media[service_shortname] %}
 		<div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
-			<div style="font-size: 24px; margin-right: 8px !important; height: 20px;"><i class="{{ service.fa }} fa-sm fa-fw"></i></div>
+			<div style="font-size: 24px; margin-right: 8px !important;"><i class="{{ service.fa }} fa-sm fa-fw"></i></div>
 			<a href="{{ service.profile_url_prefix }}{{ account[1] }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
 			{{ account[1] }}</a>
     </div>
