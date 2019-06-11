@@ -29,8 +29,11 @@
       </div>
     {% endif %}
     
-    {% if site.social_media %}
+
+{% if site.social_media %}
 	  {% for account in site.social_media %}
+	  {% assign service_shortname = account[0] %}
+            {% assign service = site.data.social_media[service_shortname] %}
 		<div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
 			<div style="font-size: 24px; margin-right: 8px !important;"><i class="{{ service.fa }} fa-sm"></i></div>
 			<a href="{{ service.profile_url_prefix }}{{ account[1] }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
