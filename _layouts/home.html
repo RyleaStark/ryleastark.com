@@ -40,6 +40,9 @@
             {{ content }}
           </div>
         {% endunless %}
+        
+        <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Why Hello</h2>
+    <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">I make things.</p>
 
         <!--{% include projects.html %}-->
 
