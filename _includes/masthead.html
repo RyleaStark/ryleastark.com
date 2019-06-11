@@ -44,7 +44,7 @@
     
     {% if user.location %}
       <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
-        {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
+        <div style="font-size: 24px; margin-right: 8px !important;"><i class="fas fa-thumbtack fa-sm fa-fw"></i></div>
         {{ user.location }}
       </div>
     {% endif %}
